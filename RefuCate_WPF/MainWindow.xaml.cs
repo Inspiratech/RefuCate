@@ -24,6 +24,7 @@ namespace RefuCate_WPF
         public MainWindow()
         {
             InitializeComponent();
+          
         }
     }
 }

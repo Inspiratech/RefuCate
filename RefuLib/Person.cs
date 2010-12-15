@@ -10,30 +10,30 @@ namespace RefuLib
         private enum MaritalStatus { MARRIED, SINGLE };
         private enum SkinColour { CAUCASIAN, ASIAN, BLACK}; //TODO alter, not pc
 
-        private String firstName { get; set; }
-        private String lastName { get; set; }
-        private String otherNames { get; set; }
-        private String commonName { get; set; }
-        private Age age { get; set; }
-        private Gender gender { get; set; }
+        public String firstName { get; set; }
+        public String lastName { get; set; }
+        public String otherNames { get; set; }
+        public String commonName { get; set; }
+        public Age age { get; set; }
+        public Gender gender { get; set; }
         //private Image image { get; set; }
-        private float height { get; set; }
+        public float height { get; set; }
         //private Color eyeColour { get; set; }
-        private HairLength hairLength { get; set; }
-        private String futureLocation { get; set; }
-        private String lastKnownLocation { get; set; }
-        private String contactDetails { get; set; }
-        private LifeStatus lifeStatus { get; set; }
-        private MaritalStatus maritalStatus { get; set; }
-        private SkinColour skinColour { get; set; }
-        private String nationality { get; set; }
-        private String motherTongue { get; set; }
-        private String lookingFor { get; set; }
-        private String nextOfKin { get; set; }
-        private String notes { get; set; }
-        private String definingCharacteristics { get; set; }
-        private DateTime timeOfCapture { get; set; }
-        private DateTime timeOfLastHit { get; set; }
+        public HairLength hairLength { get; set; }
+        public String futureLocation { get; set; }
+        public String lastKnownLocation { get; set; }
+        public String contactDetails { get; set; }
+        public LifeStatus lifeStatus { get; set; }
+        public MaritalStatus maritalStatus { get; set; }
+        public SkinColour skinColour { get; set; }
+        public String nationality { get; set; }
+        public String motherTongue { get; set; }
+        public String lookingFor { get; set; }
+        public String nextOfKin { get; set; }
+        public String notes { get; set; }
+        public String definingCharacteristics { get; set; }
+        public DateTime timeOfCapture { get; set; }
+        public DateTime timeOfLastHit { get; set; }
 
         private class Age
         {
