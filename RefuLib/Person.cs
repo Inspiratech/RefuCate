@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace RefuLib
 {
     public class Person
@@ -16,9 +17,9 @@ namespace RefuLib
         public String commonName { get; set; }
         public Age age { get; set; }
         public Gender gender { get; set; }
-        //private Image image { get; set; }
+       // private Image image { get; set; } //TODO: Need some sort of image class that also works on WP7/WPF
         public float height { get; set; }
-        //private Color eyeColour { get; set; }
+       // private Color eyeColour { get; set; } //TODO: Need some sort of colour class that also works on WP7/WPF
         public HairLength hairLength { get; set; }
         public String futureLocation { get; set; }
         public String lastKnownLocation { get; set; }
