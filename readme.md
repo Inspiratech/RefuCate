@@ -25,6 +25,8 @@ Requirments
 -------------
 [WP7 SDK]
 
+[WP7 Silverlight Toolkit]
+
 [Azure SDK]
 
 [Bing Maps Control]
@@ -33,5 +35,6 @@ Requirments
 
   [Inspiratech]: http://www.inspiratech.eu
   [WP7 SDK]: http://create.msdn.com/en-US/
+  [WP7 Silverlight Toolkit]: http://silverlight.codeplex.com/releases/view/55034
   [Azure SDK]: http://www.microsoft.com/windowsazure/
   [Bing Maps Control]: http://www.microsoft.com/downloads/en/details.aspx?displaylang=en&FamilyID=beb29d27-6f0c-494f-b028-1e0e3187e830
