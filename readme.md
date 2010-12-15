@@ -24,7 +24,9 @@ Library for Azure interaction
 Requirments
 -------------
 [WP7 SDK]
+
 [Azure SDK]
+
 [Bing Maps Control]
 
 
