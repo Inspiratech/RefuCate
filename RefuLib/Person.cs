@@ -5,11 +5,11 @@ namespace RefuLib
     public class Person
     {
         //Saved in same order as table in functional spec
-        private enum Gender { MALE, FEMALE };
-        private enum HairLength { BALD, VERY_SHORT, SHORT, MEDIUM, LONG, VERY_LONG };
-        private enum LifeStatus { ALIVE, DECEASED, UNKNOWN };
-        private enum MaritalStatus { MARRIED, SINGLE };
-        private enum SkinColour { CAUCASIAN, ASIAN, BLACK}; //TODO alter, not pc
+        public enum Gender { MALE, FEMALE };
+        public enum HairLength { BALD, VERY_SHORT, SHORT, MEDIUM, LONG, VERY_LONG };
+        public enum LifeStatus { ALIVE, DECEASED, UNKNOWN };
+        public enum MaritalStatus { MARRIED, SINGLE };
+        public enum SkinColour { CAUCASIAN, ASIAN, BLACK }; //TODO alter, not pc
 
         public String firstName { get; set; }
         public String lastName { get; set; }
@@ -36,7 +36,7 @@ namespace RefuLib
         public DateTime timeOfCapture { get; set; }
         public DateTime timeOfLastHit { get; set; }
 
-        private class Age
+        public class Age
         {
             //If age in years provided year is calculated, other fields null
             private int day { get; set; }
