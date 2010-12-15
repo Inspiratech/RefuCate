@@ -21,5 +21,15 @@ A library containing common RefuCate classes
 
 Library for Azure interaction
 
+Requirments
+-------------
+[WP7 SDK]
+[Azure SDK]
+[Bing Maps Control]
+
+
 
   [Inspiratech]: http://www.inspiratech.eu
+  [WP7 SDK]: http://create.msdn.com/en-US/
+  [Azure SDK]: http://www.microsoft.com/windowsazure/
+  [Bing Maps Control]: http://www.microsoft.com/downloads/en/details.aspx?displaylang=en&FamilyID=beb29d27-6f0c-494f-b028-1e0e3187e830
