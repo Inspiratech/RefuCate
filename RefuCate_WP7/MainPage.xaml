@@ -35,7 +35,7 @@
         		<PasswordBox/>
         		<TextBlock TextWrapping="Wrap" Text="Language:"/>
         		<CheckBox Content="Save settings?"/>
-        		<Button x:Name="btn_ok" Height="88" Content="OK"/>
+        		<Button x:Name="btn_ok" Height="88" Content="OK" Click="btn_ok_Click" />
         	</StackPanel></Grid>
     </Grid>
  

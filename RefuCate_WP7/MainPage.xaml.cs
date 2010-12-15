@@ -20,5 +20,14 @@ namespace RefuCate_WP7
         {
             InitializeComponent();
         }
+
+        private void btn_ok_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO save
+            MessageBox.Show("Saved!");
+            //TODO show capture page
+            NavigationService.Navigate(new Uri("/CapturePage.xaml", UriKind.Relative));
+
+        }
     }
 }
