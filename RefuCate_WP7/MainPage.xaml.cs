@@ -23,11 +23,15 @@ namespace RefuCate_WP7
 
         private void btn_ok_Click(object sender, RoutedEventArgs e)
         {
-            //TODO save
-            MessageBox.Show("Saved!");
-            //TODO show capture page
+            if (chk_save.IsChecked == true)
+            {
+                Utils.SaveUserSettings((App.Current.RootVisual as PhoneApplicationFrame).DataContext as Settings);
+            }
+            else
+            {
+                Utils.ClearUserSettings();
+            }
             NavigationService.Navigate(new Uri("/CapturePage.xaml", UriKind.Relative));
-
         }
     }
 }

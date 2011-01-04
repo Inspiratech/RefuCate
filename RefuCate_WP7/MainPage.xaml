@@ -23,18 +23,18 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock x:Name="ApplicationTitle" Text="RefuCate" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="settings" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="PageTitle" Text="user login" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
         	<StackPanel Margin="0,0,8,0">
         		<TextBlock TextWrapping="Wrap" Text="User Name:"/>
-        		<TextBox TextWrapping="Wrap" Text="TextBox"/>
+        		<TextBox TextWrapping="Wrap" Text="{Binding Path=userName, Mode=TwoWay}"/>
         		<TextBlock TextWrapping="Wrap" Text="Password:"/>
-        		<PasswordBox/>
+        		<PasswordBox Password="{Binding Path=password,Mode=TwoWay}"/>
         		<TextBlock TextWrapping="Wrap" Text="Language:"/>
-        		<CheckBox Content="Save settings?"/>
+        		<CheckBox x:Name="chk_save" IsChecked="{Binding Path=saveSettings, Mode=TwoWay}" Content="Save settings?"/>
         		<Button x:Name="btn_ok" Height="88" Content="OK" Click="btn_ok_Click" />
         	</StackPanel></Grid>
     </Grid>

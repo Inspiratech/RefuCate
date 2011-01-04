@@ -12,6 +12,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using System.IO.IsolatedStorage;
+using System.Xml.Serialization;
 
 namespace RefuCate_WP7
 {
@@ -56,6 +58,35 @@ namespace RefuCate_WP7
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            
+            var settings = new Settings();
+            // Check if user data has been saved - if so pre-load values
+            using (IsolatedStorageFile isf = IsolatedStorageFile.GetUserStoreForApplication())
+            {
+                if(isf.FileExists("user.dat"))
+                {
+                    using(IsolatedStorageFileStream fs = isf.OpenFile("user.dat", System.IO.FileMode.Open))
+                    {
+                        XmlSerializer ser = new XmlSerializer(typeof(Settings));
+                        object obj = ser.Deserialize(fs);
+
+                        if(obj != null && obj is Settings)
+                        {
+                            settings = obj as Settings;
+                        }
+                        else
+                        {
+                            settings = new Settings();
+                        }
+                    }
+                }
+                else
+                {
+                    settings = new Settings();
+                }
+            }
+
+            RootFrame.DataContext = settings;
         }
 
         // Code to execute when the application is activated (brought to foreground)
