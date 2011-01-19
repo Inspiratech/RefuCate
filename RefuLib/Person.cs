@@ -21,8 +21,8 @@ namespace RefuLib
         public float height { get; set; }
        // private Color eyeColour { get; set; } //TODO: Need some sort of colour class that also works on WP7/WPF
         public HairLength hairLength { get; set; }
-        public String futureLocation { get; set; }
-        public String lastKnownLocation { get; set; }
+        public String countryOfAsylum { get; set; }
+        public String contryOfOrigin { get; set; }
         public String contactDetails { get; set; }
         public LifeStatus lifeStatus { get; set; }
         public MaritalStatus maritalStatus { get; set; }
