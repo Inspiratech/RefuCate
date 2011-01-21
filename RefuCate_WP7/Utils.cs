@@ -15,9 +15,9 @@ namespace RefuCate_WP7
 {
     public class Utils
     {
+        public enum LoginStatus { SUCCESS, AUTH_ERROR, CON_ERROR };
 
-
-        public static void ClearUserSettings()
+        public static void clearUserSettings()
         {
             using (IsolatedStorageFile isf = IsolatedStorageFile.GetUserStoreForApplication())
             {
@@ -28,7 +28,7 @@ namespace RefuCate_WP7
             }
         }
 
-        public static void SaveUserSettings(Settings settings)
+        public static void saveUserSettings(Settings settings)
         {
             using (IsolatedStorageFile isf = IsolatedStorageFile.GetUserStoreForApplication())
             {
@@ -41,5 +41,12 @@ namespace RefuCate_WP7
                 }
             }
         }
+
+        public static LoginStatus login(Settings settings)
+        {
+            //TODO: Login code + encryption
+            return LoginStatus.AUTH_ERROR;
+        }
+
     }
 }

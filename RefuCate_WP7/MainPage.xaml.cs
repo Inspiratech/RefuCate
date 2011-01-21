@@ -23,15 +23,33 @@ namespace RefuCate_WP7
 
         private void btn_ok_Click(object sender, RoutedEventArgs e)
         {
+            Settings userSettings = (App.Current.RootVisual as PhoneApplicationFrame).DataContext as Settings;
             if (chk_save.IsChecked == true)
             {
-                Utils.SaveUserSettings((App.Current.RootVisual as PhoneApplicationFrame).DataContext as Settings);
+                Utils.saveUserSettings(userSettings);
             }
             else
             {
-                Utils.ClearUserSettings();
+                Utils.clearUserSettings();
             }
-            NavigationService.Navigate(new Uri("/CapturePage.xaml", UriKind.Relative));
+
+            Utils.LoginStatus status = Utils.login(userSettings);
+
+            //If login is successful load capture page, otherwise determine error (login/connection)
+            //TODO: enumeration for status results: Success, Invalid credentials, Connection error
+            if (status == Utils.LoginStatus.SUCCESS)
+            {
+                NavigationService.Navigate(new Uri("/CapturePage.xaml", UriKind.Relative));
+            }
+            else if (status == Utils.LoginStatus.AUTH_ERROR)
+            {
+                MessageBox.Show("The username or password entered was incorrect");
+            }
+            else if (status == Utils.LoginStatus.CON_ERROR)
+            {
+                MessageBox.Show("No data connection available, please try again");
+            }
+
         }
     }
 }

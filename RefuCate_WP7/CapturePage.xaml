@@ -54,9 +54,9 @@
 			<controls:PivotItem x:Name="locationInfo" Header="location info">
 				<StackPanel>
 					<TextBlock TextWrapping="Wrap" Text="Country of Origin"/>
-                    <TextBox Text="{Binding Path=countryOfOrigin, Mode=TwoWay}"/>
+                    <TextBox Text="{Binding Path=addressOfOrigin, Mode=TwoWay}"/>
                     <TextBlock TextWrapping="Wrap" Text="Country of Asylum"/>
-                    <TextBox Text="{Binding Path=countryOfAsylum, Mode=TwoWay}"/>
+                    <TextBox Text="{Binding Path=addressOfAsylum, Mode=TwoWay}"/>
                 </StackPanel>
 			</controls:PivotItem>
 			<controls:PivotItem x:Name="miscInfo" Header="misc info">
