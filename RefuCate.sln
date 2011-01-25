@@ -2,16 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefuCate_WPF", "RefuCate_WPF\RefuCate_WPF.csproj", "{A9875891-AE10-4E81-B50A-0F0BABCCC16F}"
-	ProjectSection(ProjectDependencies) = postProject
-		{E4A3735C-630E-4945-A12F-61A8C2E5DF0E} = {E4A3735C-630E-4945-A12F-61A8C2E5DF0E}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefuCate_WP7", "RefuCate_WP7\RefuCate_WP7.csproj", "{9313C242-EB42-46B6-A319-E1A92E712DEC}"
-	ProjectSection(ProjectDependencies) = postProject
-		{E4A3735C-630E-4945-A12F-61A8C2E5DF0E} = {E4A3735C-630E-4945-A12F-61A8C2E5DF0E}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefuLib", "RefuLib\RefuLib.csproj", "{E4A3735C-630E-4945-A12F-61A8C2E5DF0E}"
 EndProject
 Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "SeaQuilt", "SeaQuilt\SeaQuilt.ccproj", "{116E432C-41E6-4D47-860F-9821DFA5A704}"
 EndProject
@@ -55,16 +47,6 @@ Global
 		{9313C242-EB42-46B6-A319-E1A92E712DEC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{9313C242-EB42-46B6-A319-E1A92E712DEC}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
 		{9313C242-EB42-46B6-A319-E1A92E712DEC}.Release|x86.ActiveCfg = Release|Any CPU
-		{E4A3735C-630E-4945-A12F-61A8C2E5DF0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E4A3735C-630E-4945-A12F-61A8C2E5DF0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E4A3735C-630E-4945-A12F-61A8C2E5DF0E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{E4A3735C-630E-4945-A12F-61A8C2E5DF0E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{E4A3735C-630E-4945-A12F-61A8C2E5DF0E}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{E4A3735C-630E-4945-A12F-61A8C2E5DF0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E4A3735C-630E-4945-A12F-61A8C2E5DF0E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E4A3735C-630E-4945-A12F-61A8C2E5DF0E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{E4A3735C-630E-4945-A12F-61A8C2E5DF0E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{E4A3735C-630E-4945-A12F-61A8C2E5DF0E}.Release|x86.ActiveCfg = Release|Any CPU
 		{116E432C-41E6-4D47-860F-9821DFA5A704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{116E432C-41E6-4D47-860F-9821DFA5A704}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{116E432C-41E6-4D47-860F-9821DFA5A704}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
