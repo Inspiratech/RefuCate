@@ -14,19 +14,19 @@
 			<controls:PivotItem x:Name="personalInfo" Header="personal info">
 				<StackPanel>
 					<TextBlock TextWrapping="Wrap" Text="First Name"/>
-					<TextBox TextWrapping="Wrap"/>
-					<TextBlock TextWrapping="Wrap" Text="Last Name"/>
-					<TextBox TextWrapping="Wrap"/>
+                    <TextBox TextWrapping="Wrap" Text="{Binding Path=firstName, Mode=TwoWay}" />
+                    <TextBlock TextWrapping="Wrap" Text="Last Name"/>
+                    <TextBox TextWrapping="Wrap" Text="{Binding Path=lastName, Mode=TwoWay}"/>
 					<TextBlock TextWrapping="Wrap" Text="Other names"/>
-					<TextBox TextWrapping="Wrap"/>
+                    <TextBox TextWrapping="Wrap" Text="{Binding Path=otherNames, Mode=TwoWay}"/>
 					<TextBlock TextWrapping="Wrap" Text="Common Name"/>
-					<TextBox TextWrapping="Wrap"/>
+                    <TextBox TextWrapping="Wrap" Text="{Binding Path=commonName, Mode=TwoWay}"/>
 					<TextBlock TextWrapping="Wrap" Text="D.O.B"/>
-					<toolkit:DatePicker/>
+                    <toolkit:DatePicker /> <!-- Value="{Binding Path=dateOfBirth, Mode=TwoWay}"/>-->
 					<TextBlock TextWrapping="Wrap" Text="Nationality"/>
-					<TextBox TextWrapping="Wrap"/>
+                    <TextBox TextWrapping="Wrap" Text="{Binding Path=nationality, Mode=TwoWay}"/>
 					<TextBlock TextWrapping="Wrap" Text="Primary/spoken languages"/>
-					<TextBox TextWrapping="Wrap"/>
+                    <TextBox TextWrapping="Wrap" Text="{Binding Path=motherTongue, Mode=TwoWay}"/>
 					<TextBlock TextWrapping="Wrap" Text="Gender"/>
 					<StackPanel Height="100" Orientation="Horizontal">
 						<RadioButton Content="Male" HorizontalAlignment="Left" GroupName="gender"/>
