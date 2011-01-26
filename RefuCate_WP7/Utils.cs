@@ -45,7 +45,7 @@ namespace RefuCate_WP7
         public static LoginStatus login(Settings settings)
         {
             //TODO: Login code + encryption
-            return LoginStatus.AUTH_ERROR;
+            return LoginStatus.SUCCESS;
         }
 
     }
