@@ -38,6 +38,17 @@ namespace RefuCate_WP7
             }
         }
 
+        private Uri _serverAddress;
+        public Uri serverAddress
+        {
+            get { return _serverAddress; }
+            set
+            {
+                _serverAddress = value;
+                NotifyPropertyChanged("serverAddress");
+            }
+        }
+
         private Boolean _saveSettings;
         public Boolean saveSettings
         {

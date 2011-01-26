@@ -34,6 +34,8 @@
         		<TextBlock TextWrapping="Wrap" Text="Password:"/>
         		<PasswordBox Password="{Binding Path=password,Mode=TwoWay}"/>
         		<TextBlock TextWrapping="Wrap" Text="Language:"/>
+                <TextBlock TextWrapping="Wrap" Text="IP" />
+                <TextBox TextWrapping="Wrap" Text="{Binding Path=serverAddress, Mode=TwoWay}" />
         		<CheckBox x:Name="chk_save" IsChecked="{Binding Path=saveSettings, Mode=TwoWay}" Content="Save settings?"/>
         		<Button x:Name="btn_ok" Height="88" Content="OK" Click="btn_ok_Click" />
         	</StackPanel></Grid>

@@ -48,5 +48,10 @@ namespace RefuCate_WP7
             return LoginStatus.SUCCESS;
         }
 
+        public static bool dbConnect()
+        {
+            return false;
+        }
+
     }
 }
