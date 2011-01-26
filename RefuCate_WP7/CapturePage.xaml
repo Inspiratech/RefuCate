@@ -13,8 +13,14 @@
 			<!--Pivot item one-->
 			<controls:PivotItem x:Name="personalInfo" Header="personal info">
 				<StackPanel>
-					<TextBlock TextWrapping="Wrap" Text="Name"/>
-					<TextBox x:Name="txtName" TextWrapping="Wrap"/>
+					<TextBlock TextWrapping="Wrap" Text="First Name"/>
+					<TextBox TextWrapping="Wrap"/>
+					<TextBlock TextWrapping="Wrap" Text="Last Name"/>
+					<TextBox TextWrapping="Wrap"/>
+					<TextBlock TextWrapping="Wrap" Text="Other names"/>
+					<TextBox TextWrapping="Wrap"/>
+					<TextBlock TextWrapping="Wrap" Text="Common Name"/>
+					<TextBox TextWrapping="Wrap"/>
 					<TextBlock TextWrapping="Wrap" Text="D.O.B"/>
 					<toolkit:DatePicker/>
 					<TextBlock TextWrapping="Wrap" Text="Nationality"/>
@@ -27,6 +33,10 @@
 						<RadioButton Content="Female" HorizontalAlignment="Right" GroupName="gender"/>
 					</StackPanel>
 					<TextBlock TextWrapping="Wrap" Text="Life Status"/>
+					<StackPanel Height="100" Orientation="Horizontal">
+						<RadioButton Content="Alive" HorizontalAlignment="Left" GroupName="life_status"/>
+						<RadioButton Content="Deceased" HorizontalAlignment="Right" GroupName="life_status"/>
+					</StackPanel>
 				</StackPanel>
 			</controls:PivotItem>
 			<!--Pivot item one-->
@@ -47,7 +57,11 @@
 						<ListBoxItem Content="Dark Brown"/>
 					</ListBox>
 					<TextBlock TextWrapping="Wrap" Text="Skin colour"/>
-					<ListBox Height="100"/>
+					<ListBox Height="100">
+						<ListBoxItem Content="Caucasian"/>
+						<ListBoxItem Content="ListBoxItem"/>
+						<ListBoxItem Content="ListBoxItem"/>
+					</ListBox>
 					<TextBlock TextWrapping="Wrap" Text="Defining characteristics"/>
 					<TextBox x:Name="txtDefiningCharacteristics" TextWrapping="Wrap" Text="Some stuff!"/>
 					<TextBlock TextWrapping="Wrap" Text="Height"/>
