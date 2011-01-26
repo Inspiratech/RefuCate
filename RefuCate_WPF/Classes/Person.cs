@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RefuLib
+namespace RefuCate_WPF.Classes
 {
     public class Person
     {

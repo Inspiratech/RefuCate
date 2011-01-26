@@ -6,12 +6,43 @@
 
     <Grid>
         <TabControl>
+            <!-- Admin Tab-->
             <TabItem Header="Admin">
                 <Label Content="Admin Panel"/>
             </TabItem>
+            
+            <!-- Data Entry Tab-->
             <TabItem Header="Data Entry">
-                <Label Content="Data Entry Area" />
-            </TabItem>
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Data Entry, Testing?" />
+                    <!-- First off, this is WAY, WAYY too messy, there must be a simpler way.. -->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        
+                        <!-- First Name-->
+                        <Label Grid.Column="0" Grid.Row="0" Content="First Name: " />
+                        <TextBox Grid.Column="1" Grid.Row="0" x:Name="firstName" />
+
+                        <!-- Second Name-->
+                        <Label Grid.Column="0" Grid.Row="1" Content="Second Name: " />
+                        <TextBox Grid.Column="1" Grid.Row="1" x:Name="secondName" />
+
+                    </Grid> 
+                    <Button x:Name="createPerson" Content="Create" Click="createPerson_Click" />
+                    <Button x:Name="listPeople" Content="List People" Click="listPeople_Click" />
+                </StackPanel>
+            </TabItem> 
+            
+            <!-- Search Tab-->
             <TabItem Header="Search">
                 <Label Content="Search Area" />
             </TabItem>
