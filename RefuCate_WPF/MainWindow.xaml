@@ -37,8 +37,10 @@
                         <TextBox Grid.Column="1" Grid.Row="1" x:Name="secondName" />
 
                     </Grid> 
-                    <Button x:Name="createPerson" Content="Create" Click="createPerson_Click" />
-                    <Button x:Name="listPeople" Content="List People" Click="listPeople_Click" />
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="createPerson" Content="Create" Click="createPerson_Click" />
+                        <Button x:Name="listPeople" Content="List People" Click="listPeople_Click" />
+                    </StackPanel>
                 </StackPanel>
             </TabItem> 
             
