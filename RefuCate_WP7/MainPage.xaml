@@ -11,7 +11,7 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -34,7 +34,7 @@
         		<TextBlock TextWrapping="Wrap" Text="Password:"/>
         		<PasswordBox Password="{Binding Path=password,Mode=TwoWay}"/>
                 <TextBlock TextWrapping="Wrap" Text="IP" />
-                <TextBox TextWrapping="Wrap" Text="{Binding Path=serverAddress, Mode=TwoWay}" />
+                <TextBox x:Name="txtServerAddress" TextWrapping="Wrap" Text="{Binding Path=serverAddress, Mode=TwoWay}" />
         		<CheckBox x:Name="chk_save" IsChecked="{Binding Path=saveSettings, Mode=TwoWay}" Content="Save settings?"/>
         		<Button x:Name="btn_ok" Height="88" Content="OK" Click="btn_ok_Click" />
         	</StackPanel></Grid>

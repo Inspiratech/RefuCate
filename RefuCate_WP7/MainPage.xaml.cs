@@ -51,5 +51,26 @@ namespace RefuCate_WP7
             }
 
         }
+
+        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            //loading logic here
+            //either custom regex or:
+            InputScope scope = new InputScope();
+            InputScopeName name = new InputScopeName();
+            name.NameValue = InputScopeNameValue.Url;
+            scope.Names.Add(name);
+            txtServerAddress.InputScope = scope;
+            //or in XAML for MVC:
+            /*
+             * <TextBox Name="txtPhoneNumber" Height="71" Width="460" >
+                    <TextBox.InputScope>
+                        <InputScope>
+                            <InputScopeName NameValue="Number" />
+                        </InputScope>
+                </TextBox.InputScope>
+            </TextBox>
+             */
+        }
     }
 }

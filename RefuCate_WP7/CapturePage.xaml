@@ -4,7 +4,7 @@
 	FontSize="{StaticResource PhoneFontSizeNormal}"
 	Foreground="{StaticResource PhoneForegroundBrush}"
 	SupportedOrientations="Portrait" Orientation="Portrait"
-	shell:SystemTray.IsVisible="True" mc:Ignorable="d">
+	shell:SystemTray.IsVisible="True" mc:Ignorable="d" Loaded="PhoneApplicationPage_Loaded">
 
 	<!--LayoutRoot is the root grid where all page content is placed-->
 	<Grid x:Name="LayoutRoot" Background="Transparent">
@@ -13,7 +13,12 @@
 			<!--Pivot item one-->
 			<controls:PivotItem x:Name="personalInfo" Header="personal info">
 				<StackPanel>
-					<TextBlock TextWrapping="Wrap" Text="First Name"/>
+                    <Button Content="Take Photo" Height="auto" Name="btn_Pic" Width="auto" Click="picClick" BorderBrush="#FF69FF64">
+                        <Button.Background>
+                            <ImageBrush />
+                        </Button.Background>
+                    </Button>
+                    <TextBlock TextWrapping="Wrap" Text="First Name"/>
                     <TextBox TextWrapping="Wrap" Text="{Binding Path=firstName, Mode=TwoWay}" />
                     <TextBlock TextWrapping="Wrap" Text="Last Name"/>
                     <TextBox TextWrapping="Wrap" Text="{Binding Path=lastName, Mode=TwoWay}"/>
