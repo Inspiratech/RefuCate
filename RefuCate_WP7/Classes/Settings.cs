@@ -38,8 +38,8 @@ namespace RefuCate_WP7
             }
         }
 
-        private Uri _serverAddress;
-        public Uri serverAddress
+        private String _serverAddress;
+        public String serverAddress
         {
             get { return _serverAddress; }
             set
@@ -56,7 +56,7 @@ namespace RefuCate_WP7
             set
             {
                 _saveSettings = value;
-                NotifyPropertyChanged("saveDetails");
+                NotifyPropertyChanged("saveSettings");
             }
         }
         
