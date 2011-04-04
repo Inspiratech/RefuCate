@@ -23,6 +23,7 @@ namespace RefuCate_WP7
 
     public partial class CapturePage : PhoneApplicationPage
     {
+        //Object used for databinding
         Person person = new Person();
         ApplicationBarIconButton btnCamera, btnDone, btnClear;
         CameraCaptureTask ctask;
@@ -30,6 +31,7 @@ namespace RefuCate_WP7
         public CapturePage()
         {
             InitializeComponent();
+            //Actually get databinding set up
             person = (App.Current.RootVisual as PhoneApplicationFrame).DataContext as Person;
 
             ApplicationBar = new ApplicationBar();

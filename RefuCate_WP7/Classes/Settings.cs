@@ -14,48 +14,48 @@ namespace RefuCate_WP7
 {
     public class Settings : INotifyPropertyChanged
     {
-        private String _userName = "";
+        private String m_userName = "";
         public String userName
         { 
-            get { return _userName; } 
+            get { return m_userName; } 
             set
             {
-                _userName = value;
+                m_userName = value;
                 NotifyPropertyChanged("userName");
             }
         }
 
 
         //Possibly SecureString?
-        private String _password;
+        private String m_password;
         public String password
         {
-            get { return _password; }
+            get { return m_password; }
             set
             {
-                _password = value;
+                m_password = value;
                 NotifyPropertyChanged("password");
             }
         }
 
-        private String _serverAddress;
+        private String m_serverAddress;
         public String serverAddress
         {
-            get { return _serverAddress; }
+            get { return m_serverAddress; }
             set
             {
-                _serverAddress = value;
+                m_serverAddress = value;
                 NotifyPropertyChanged("serverAddress");
             }
         }
 
-        private Boolean _saveSettings;
+        private Boolean m_saveSettings;
         public Boolean saveSettings
         {
-            get { return _saveSettings; }
+            get { return m_saveSettings; }
             set
             {
-                _saveSettings = value;
+                m_saveSettings = value;
                 NotifyPropertyChanged("saveSettings");
             }
         }
