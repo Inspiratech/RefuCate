@@ -25,7 +25,6 @@ namespace RefuCate_WP7
     {
         //Object used for databinding
         Person person = new Person();
-        ApplicationBarIconButton btnCamera, btnDone, btnClear;
         CameraCaptureTask ctask;
         WriteableBitmap CapturedImage;
         public CapturePage()
@@ -33,26 +32,6 @@ namespace RefuCate_WP7
             InitializeComponent();
             //Actually get databinding set up
             person = (App.Current.RootVisual as PhoneApplicationFrame).DataContext as Person;
-
-            ApplicationBar = new ApplicationBar();
-            ApplicationBar.IsVisible = true;
-            //Maybe do this in XAML for MVC
-            btnCamera = new ApplicationBarIconButton(new Uri("/Icons/appbar.feature.camera.rest.png", UriKind.Relative));
-            btnCamera.Text = "Camera";
-            btnCamera.Click += new EventHandler(btnCamera_Click);
-
-            btnDone = new ApplicationBarIconButton(new Uri("Icons/appbar.check.rest.png", UriKind.Relative));
-            btnDone.Text = "Submit";
-            btnDone.Click += new EventHandler(btnDone_Click);
-
-            btnClear = new ApplicationBarIconButton(new Uri("Icons/appbar.cancel.rest.png", UriKind.Relative));
-            btnClear.Text = "Clear";
-            btnClear.Click += new EventHandler(btnClear_Click);
-
-
-            ApplicationBar.Buttons.Add(btnDone);
-            ApplicationBar.Buttons.Add(btnCamera);
-            ApplicationBar.Buttons.Add(btnClear);
             ctask = new CameraCaptureTask();
             ctask.Completed += new EventHandler<PhotoResult>(ctask_Completed);
 
@@ -110,6 +89,15 @@ namespace RefuCate_WP7
         {
             //loading logic here
 
+        }
+
+        private void DOB_ValueChanged(object sender, DateTimeValueChangedEventArgs e)
+        {
+            MessageBox.Show("You changed the D.O.B!");//TODO Remove
+            DateTime date = (DateTime)DOB.Value;
+            //sort of databinding imitation
+            //TODO checkbox/slider for 'age' in years check.
+            person.age = new Person.Age(date.Day, date.Month, date.Year);
         }
     }
 }

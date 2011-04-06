@@ -70,7 +70,7 @@ namespace RefuCate_WPF.Classes
         private String m_firstName;
         public String firstName 
         { 
-            get{return m_firstName;}
+            get{ return m_firstName; }
             set
             {
                 m_firstName = value;
@@ -222,6 +222,12 @@ namespace RefuCate_WPF.Classes
 
         public class Age
         {
+            public Age(int day, int month, int year)
+            {
+                this.day = day;
+                this.month = month;
+                this.year = year;
+            }
             //If age in years provided year is calculated, other fields null
             private int day { get; set; }
             private int month { get; set; }
