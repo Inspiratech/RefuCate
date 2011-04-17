@@ -49,8 +49,7 @@ namespace RefuCate_WP7
 
         private void picClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Photo time!");
-            //ctask.Show();
+            ctask.Show();
         }
 
 
@@ -93,11 +92,7 @@ namespace RefuCate_WP7
 
         private void DOB_ValueChanged(object sender, DateTimeValueChangedEventArgs e)
         {
-            MessageBox.Show("You changed the D.O.B!");//TODO Remove
-            DateTime date = (DateTime)DOB.Value;
-            //sort of databinding imitation
-            //TODO checkbox/slider for 'age' in years check.
-            person.age = new Person.Age(date.Day, date.Month, date.Year);
+
         }
     }
 }

@@ -63,9 +63,9 @@ namespace RefuCate_WP7
             // Check if user data has been saved - if so pre-load values
             using (IsolatedStorageFile isf = IsolatedStorageFile.GetUserStoreForApplication())
             {
-                if(isf.FileExists("user.dat"))
+                if(isf.FileExists("refu.dat"))
                 {
-                    using(IsolatedStorageFileStream fs = isf.OpenFile("user.dat", System.IO.FileMode.Open))
+                    using(IsolatedStorageFileStream fs = isf.OpenFile("refu.dat", System.IO.FileMode.Open))
                     {
                         XmlSerializer ser = new XmlSerializer(typeof(Settings));
                         object obj = ser.Deserialize(fs);

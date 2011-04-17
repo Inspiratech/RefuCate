@@ -12,6 +12,7 @@
 		<controls:Pivot Title="RefuCate">
 			<!--Pivot item one-->
 			<controls:PivotItem x:Name="personalInfo" Header="personal info">
+                <ScrollViewer>
 				<StackPanel>
                     <Button Content="Take Photo" Height="auto" Name="btn_Pic" Width="auto" Click="picClick" BorderBrush="#FF69FF64"/>
                     <TextBlock TextWrapping="Wrap" Text="First Name"/>
@@ -39,9 +40,11 @@
 						<RadioButton Content="Deceased" HorizontalAlignment="Right" GroupName="life_status"/>
 					</StackPanel>
 				</StackPanel>
-			</controls:PivotItem>
+                </ScrollViewer>
+            </controls:PivotItem>
 			<!--Pivot item one-->
 			<controls:PivotItem x:Name="characteristics" Header="characteristics">
+                <ScrollViewer>
 				<StackPanel>
 					<TextBlock TextWrapping="Wrap" Text="Picture"/>
 					<Image Height="100"/>
@@ -67,10 +70,12 @@
 					<TextBox x:Name="txtDefiningCharacteristics" TextWrapping="Wrap" Text="Some stuff!"/>
 					<TextBlock TextWrapping="Wrap" Text="Height"/>
 				</StackPanel>
-			</controls:PivotItem>
+                </ScrollViewer>
+            </controls:PivotItem>
 
  			<!--Pivot item two-->
 			<controls:PivotItem x:Name="familyInfo" Header="family info">
+                <ScrollViewer>
 				<StackPanel>
 					<TextBlock TextWrapping="Wrap" Text="Seeking"/>
 					<TextBox TextWrapping="Wrap"/>
@@ -83,23 +88,28 @@
 						<RadioButton Content="Divorced" GroupName="marital_status"/>
 					</StackPanel>
 				</StackPanel>
-			</controls:PivotItem>
+                </ScrollViewer>
+            </controls:PivotItem>
 			<controls:PivotItem x:Name="locationInfo" Header="location info">
+                <ScrollViewer>
 				<StackPanel>
 					<TextBlock TextWrapping="Wrap" Text="Country of Origin"/>
                     <TextBox Text="{Binding addressOfOrigin, Mode=TwoWay}"/>
                     <TextBlock TextWrapping="Wrap" Text="Country of Asylum"/>
                     <TextBox Text="{Binding addressOfAsylum, Mode=TwoWay}"/>
                 </StackPanel>
-			</controls:PivotItem>
+                </ScrollViewer>
+            </controls:PivotItem>
 			<controls:PivotItem x:Name="miscInfo" Header="misc info">
-				<StackPanel>
+                <ScrollViewer>
+                    <StackPanel>
 					<TextBlock TextWrapping="Wrap" Text="Contact Details"/>
 					<TextBox x:Name="txtContactDetails" TextWrapping="Wrap"/>
 					<TextBlock TextWrapping="Wrap" Text="Notes"/>
 					<TextBox x:Name="txtNotes" TextWrapping="Wrap"/>
 				</StackPanel>
-			</controls:PivotItem>
+                </ScrollViewer>
+            </controls:PivotItem>
 		</controls:Pivot>
 	</Grid>
 
