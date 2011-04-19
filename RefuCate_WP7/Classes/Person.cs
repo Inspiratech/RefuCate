@@ -244,5 +244,26 @@ namespace RefuCate_WPF.Classes
         //used in databinding
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public void clear()
+        {
+            addressOfAsylum = null;
+            addressOfOrigin = null;
+            commonName = null;
+            contactDetails = null;
+            definingCharacteristics = null;
+            firstName = null;
+            gender = 0;
+            hairLength = 0;
+            lastName = null;
+            lifeStatus = 0;
+            lookingFor = null;
+            maritalStatus = 0;
+            motherTongue = null;
+            nationality = null;
+            nextOfKin = null;
+            notes = null;
+            otherNames = null;
+            skinColour = 0;
+        }
     }
 }

@@ -24,14 +24,15 @@ namespace RefuCate_WP7
     public partial class CapturePage : PhoneApplicationPage
     {
         //Object used for databinding
-        Person person = new Person();
+        Person person;
         CameraCaptureTask ctask;
         WriteableBitmap CapturedImage;
         public CapturePage()
         {
             InitializeComponent();
             //Actually get databinding set up
-            person = (App.Current.RootVisual as PhoneApplicationFrame).DataContext as Person;
+            person = new Person();
+            (App.Current.RootVisual as PhoneApplicationFrame).DataContext = person;
             ctask = new CameraCaptureTask();
             ctask.Completed += new EventHandler<PhotoResult>(ctask_Completed);
 
@@ -44,7 +45,24 @@ namespace RefuCate_WP7
 
         void btnClear_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Clearing form!"); //TODO confirmation box
+            MessageBox.Show("Clearing form..."); //TODO confirmation box
+
+            person.clear();
+            DateTime now = DateTime.Now;
+            DOB.Value = now;
+
+            picEyes.SelectedIndex = 0;
+            picHair.SelectedIndex = 0;
+            picSkin.SelectedIndex = 0;
+
+            txtDefiningCharacteristics.Text = "";
+            txtHeight.Text = "";
+            txtSeeking.Text = "";
+            txtKin.Text = "";
+
+            imgPicture.Source = null;
+            
+ 
         }
 
         private void picClick(object sender, RoutedEventArgs e)
@@ -81,6 +99,8 @@ namespace RefuCate_WP7
             {
                 //textStatus.Text = "You decided not to take a picture.";
             }
+
+            imgPicture.Source = CapturedImage;
 
         }
 

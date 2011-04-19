@@ -47,29 +47,38 @@
                 <ScrollViewer>
 				<StackPanel>
 					<TextBlock TextWrapping="Wrap" Text="Picture"/>
-					<Image Height="100"/>
-					<TextBlock TextWrapping="Wrap" Text="Eye Colour"/>
-					<ListBox Height="100">
-						<ListBoxItem Content="Blue" Background="#FF0B389C"/>
-						<ListBoxItem Content="Brown" Background="#FF6A4B08"/>
-						<ListBoxItem Content="Green" Background="#FF298614"/>
-					</ListBox>
+                        <Image x:Name="imgPicture"/>
+                            <TextBlock TextWrapping="Wrap" Text="Eye Colour"/>
+
+                        <toolkit:ListPicker x:Name="picEyes" x:FieldModifier="public">
+                            <toolkit:ListPickerItem Content="Undefined" />
+                            <toolkit:ListPickerItem Content="Blue" />
+                            <toolkit:ListPickerItem Content="Brown"/>
+                            <toolkit:ListPickerItem Content="Green" />
+                            <toolkit:ListPickerItem Content="Hazel"/>
+                        </toolkit:ListPicker>
 					<TextBlock TextWrapping="Wrap" Text="Hair colour"/>
-					<ListBox Height="100">
-						<ListBoxItem Content="Blonde"/>
-						<ListBoxItem Content="Light Brown"/>
-						<ListBoxItem Content="Dark Brown"/>
-					</ListBox>
-					<TextBlock TextWrapping="Wrap" Text="Skin colour"/>
-					<ListBox Height="100">
-						<ListBoxItem Content="Caucasian"/>
-						<ListBoxItem Content="ListBoxItem"/>
-						<ListBoxItem Content="ListBoxItem"/>
-					</ListBox>
+                        <toolkit:ListPicker x:Name="picHair" x:FieldModifier="public">
+                            <toolkit:ListPickerItem Content="Undefined" />
+                            <toolkit:ListPickerItem Content="Blonde"/>
+                            <toolkit:ListPickerItem Content="Light Brown"/>
+                            <toolkit:ListPickerItem Content="Dark Brown / Black"/>
+                            <toolkit:ListPickerItem Content="Red" />
+                        </toolkit:ListPicker>
+					<TextBlock TextWrapping="Wrap" Text="Ethnicity"/>
+                        <toolkit:ListPicker x:Name="picSkin" x:FieldModifier="public">
+                            <toolkit:ListPickerItem Content="Undefined"/>
+                            <toolkit:ListPickerItem Content="White"/>
+                            <toolkit:ListPickerItem Content="Asian"/>
+                            <toolkit:ListPickerItem Content="African" />
+                            <toolkit:ListPickerItem Content="Scandinavian"/>
+                        </toolkit:ListPicker>
 					<TextBlock TextWrapping="Wrap" Text="Defining characteristics"/>
-					<TextBox x:Name="txtDefiningCharacteristics" TextWrapping="Wrap" Text="Some stuff!"/>
+					<TextBox x:Name="txtDefiningCharacteristics" TextWrapping="Wrap" Text=""/>
 					<TextBlock TextWrapping="Wrap" Text="Height"/>
-				</StackPanel>
+                        <TextBox x:Name="txtHeight" TextWrapping="Wrap" Text=""/>
+
+                    </StackPanel>
                 </ScrollViewer>
             </controls:PivotItem>
 
@@ -77,10 +86,10 @@
 			<controls:PivotItem x:Name="familyInfo" Header="family info">
                 <ScrollViewer>
 				<StackPanel>
-					<TextBlock TextWrapping="Wrap" Text="Seeking"/>
-					<TextBox TextWrapping="Wrap"/>
+					<TextBlock TextWrapping="Wrap"  Text="Seeking"/>
+                        <TextBox TextWrapping="Wrap" x:Name="txtSeeking"/>
 					<TextBlock TextWrapping="Wrap" Text="Next of Kin"/>
-					<TextBox TextWrapping="Wrap"/>
+					<TextBox TextWrapping="Wrap" x:Name="txtKin"/>
 					<TextBlock TextWrapping="Wrap" Text="Marital Status"/>
 					<StackPanel Height="100" Orientation="Horizontal">
 						<RadioButton Content="Single" Width="130" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" GroupName="marital_status"/>
@@ -104,14 +113,18 @@
                 <ScrollViewer>
                     <StackPanel>
 					<TextBlock TextWrapping="Wrap" Text="Contact Details"/>
-					<TextBox x:Name="txtContactDetails" TextWrapping="Wrap"/>
+                        <TextBox x:Name="txtContactDetails" Text="{Binding Path=contactDetails, Mode=TwoWay}" TextWrapping="Wrap"/>
 					<TextBlock TextWrapping="Wrap" Text="Notes"/>
-					<TextBox x:Name="txtNotes" TextWrapping="Wrap"/>
+                        <TextBox x:Name="txtNotes" Text="{Binding Path=notes, Mode=TwoWay}" TextWrapping="Wrap"/>
 				</StackPanel>
                 </ScrollViewer>
             </controls:PivotItem>
 		</controls:Pivot>
 	</Grid>
+    
+    <phone:PhoneApplicationPage.Resources>
+        
+    </phone:PhoneApplicationPage.Resources>
 
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
